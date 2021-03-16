@@ -1,0 +1,152 @@
+Could not open input file: IM.php.php
+[2020-05-27 21:26:48 @15843.0]	WARNING	swSocket_bind(:433): bind(0.0.0.0:9502) failed, Error: Address already in use[98]
+PHP Fatal error:  Uncaught Swoole\Exception: failed to listen server port[0.0.0.0:9502], Error: Address already in use[98] in /var/www/html/fly/IM.php:12
+Stack trace:
+#0 /var/www/html/fly/IM.php(12): Swoole\Server->__construct('0.0.0.0', 9502)
+#1 /var/www/html/fly/IM.php(150): Server->__construct()
+#2 {main}
+  thrown in /var/www/html/fly/IM.php on line 12
+connection close: 1connection close: 2string(132) "insert into ent_message (shenqing_id,article_id,from_id,uid,content,item,create_time) values ('0','0',16,5,'56','chat','1590586128')"
+[2020-05-27 21:29:22 *16238.7]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 21:29:22 *16237.6]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 21:29:22 *16236.5]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 21:29:22 *16235.4]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 21:29:22 *16234.3]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 21:29:22 *16233.2]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 21:29:22 *16232.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 21:29:22 *16231.0]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 21:29:22 $16229.0]	WARNING	swSignal_callback (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 21:29:22 #16228.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+connection close: 4connection close: 5string(132) "insert into ent_message (shenqing_id,article_id,from_id,uid,content,item,create_time) values ('0','0',5,16,'56','chat','1590586198')"
+connection close: 7connection close: 6PHP Warning:  Packets out of order. Expected 1 received 0. Packet size=65536 in /var/www/html/fly/IM.php on line 130
+PHP Warning:  mysqli::query(): MySQL server has gone away in /var/www/html/fly/IM.php on line 130
+PHP Warning:  mysqli::query(): Error reading result set's header in /var/www/html/fly/IM.php on line 130
+connection close: 8PHP Warning:  Packets out of order. Expected 1 received 0. Packet size=2228224 in /var/www/html/fly/IM.php on line 130
+PHP Warning:  mysqli::query(): MySQL server has gone away in /var/www/html/fly/IM.php on line 130
+PHP Warning:  mysqli::query(): Error reading result set's header in /var/www/html/fly/IM.php on line 130
+connection close: 10connection close: 11connection close: 9connection close: 14PHP Warning:  Packets out of order. Expected 1 received 0. Packet size=2311 in /var/www/html/fly/IM.php on line 130
+PHP Warning:  mysqli::query(): MySQL server has gone away in /var/www/html/fly/IM.php on line 130
+PHP Warning:  mysqli::query(): Error reading result set's header in /var/www/html/fly/IM.php on line 130
+[2020-05-27 21:31:13 *16232.1]	NOTICE	swFactoryProcess_finish (ERRNO 1004): send 42 byte failed, because connection[fd=12] is closed
+connection close: 12[2020-05-27 21:32:11 @16994.0]	WARNING	swSocket_bind(:433): bind(0.0.0.0:9502) failed, Error: Address already in use[98]
+PHP Fatal error:  Uncaught Swoole\Exception: failed to listen server port[0.0.0.0:9502], Error: Address already in use[98] in /var/www/html/fly/IM.php:12
+Stack trace:
+#0 /var/www/html/fly/IM.php(12): Swoole\Server->__construct('0.0.0.0', 9502)
+#1 /var/www/html/fly/IM.php(150): Server->__construct()
+#2 {main}
+  thrown in /var/www/html/fly/IM.php on line 12
+connection close: 17connection close: 15connection close: 3connection close: 2connection close: 1[2020-05-27 22:00:02 *22693.7]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 22:00:02 *22692.6]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 22:00:02 *22691.5]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 22:00:02 *22690.4]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 22:00:02 *22689.3]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 22:00:02 *22688.2]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 22:00:02 *22687.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 22:00:02 *22686.0]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 22:00:02 $22684.0]	WARNING	swSignal_callback (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-27 22:00:02 #22683.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+connection close: 1connection close: 2connection close: 4connection close: 3connection close: 6connection close: 5connection close: 7connection close: 8connection close: 15connection close: 13connection close: 14connection close: 11connection close: 12connection close: 10connection close: 9connection close: 16connection close: 19connection close: 17connection close: 18PHP Warning:  mysqli::query(): MySQL server has gone away in /var/www/html/fly/IM.php on line 130
+PHP Warning:  mysqli::query(): Error reading result set's header in /var/www/html/fly/IM.php on line 130
+PHP Warning:  mysqli::query(): MySQL server has gone away in /var/www/html/fly/IM.php on line 130
+PHP Warning:  mysqli::query(): Error reading result set's header in /var/www/html/fly/IM.php on line 130
+PHP Warning:  mysqli::query(): MySQL server has gone away in /var/www/html/fly/IM.php on line 130
+PHP Warning:  mysqli::query(): Error reading result set's header in /var/www/html/fly/IM.php on line 130
+PHP Warning:  Error while sending QUERY packet. PID=22689 in /var/www/html/fly/IM.php on line 130
+[2020-05-28 10:50:44 *22689.3]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Broken pipe: 13
+connection close: 20connection close: 21connection close: 22connection close: 23connection close: 24string(135) "insert into ent_message (shenqing_id,article_id,from_id,uid,content,item,create_time) values ('0','0',"5",16,'好','chat','1590634866')"
+PHP Warning:  Swoole\WebSocket\Server::push() expects parameter 1 to be integer, string given in /var/www/html/fly/IM.php on line 45
+connection close: 25connection close: 26connection close: 27connection close: 28[2020-05-28 14:30:38 @27700.0]	WARNING	swSocket_bind(:433): bind(0.0.0.0:9502) failed, Error: Address already in use[98]
+PHP Fatal error:  Uncaught Swoole\Exception: failed to listen server port[0.0.0.0:9502], Error: Address already in use[98] in /var/www/html/fly/IM.php:12
+Stack trace:
+#0 /var/www/html/fly/IM.php(12): Swoole\Server->__construct('0.0.0.0', 9502)
+#1 /var/www/html/fly/IM.php(150): Server->__construct()
+#2 {main}
+  thrown in /var/www/html/fly/IM.php on line 12
+connection close: 1connection close: 3connection close: 2[2020-05-28 14:32:20 *28043.7]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-28 14:32:20 *28042.6]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-28 14:32:20 *28041.5]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-28 14:32:20 *28040.4]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-28 14:32:20 *28039.3]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-28 14:32:20 *28038.2]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-28 14:32:20 *28037.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-28 14:32:20 *28036.0]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-28 14:32:20 $28034.0]	WARNING	swSignal_callback (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-28 14:32:20 #28033.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+connection close: 4connection close: 5connection close: 6connection close: 7connection close: 8connection close: 9connection close: 10connection close: 11connection close: 12connection close: 13connection close: 14connection close: 16connection close: 15connection close: 17PHP Warning:  Packets out of order. Expected 1 received 3. Packet size=6710628 in /var/www/html/fly/IM.php on line 140
+PHP Warning:  mysqli::query(): MySQL server has gone away in /var/www/html/fly/IM.php on line 140
+PHP Warning:  mysqli::query(): Error reading result set's header in /var/www/html/fly/IM.php on line 140
+connection close: 18PHP Warning:  Packets out of order. Expected 1 received 116. Packet size=7234823 in /var/www/html/fly/IM.php on line 130
+PHP Warning:  mysqli::query(): MySQL server has gone away in /var/www/html/fly/IM.php on line 130
+PHP Warning:  mysqli::query(): Error reading result set's header in /var/www/html/fly/IM.php on line 130
+connection close: 19connection close: 21connection close: 1[2020-05-30 12:51:45 *2979.7]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-30 12:51:45 *2978.6]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-30 12:51:45 *2977.5]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-30 12:51:45 *2976.4]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-30 12:51:45 *2975.3]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-30 12:51:45 *2974.2]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-30 12:51:45 *2973.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-30 12:51:45 *2972.0]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-30 12:51:45 $2970.0]	WARNING	swSignal_callback (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-30 12:51:45 #2962.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+connection close: 2connection close: 3connection close: 4connection close: 5string(142) "insert into ent_message (shenqing_id,article_id,from_id,uid,content,item,create_time) values ('0','0',5,16,'哈哈哈哈','chat','1590841979')"
+connection close: 6connection close: 7PHP Warning:  mysqli::query(): MySQL server has gone away in /var/www/html/fly/IM.php on line 130
+PHP Warning:  mysqli::query(): Error reading result set's header in /var/www/html/fly/IM.php on line 130
+connection close: 8PHP Warning:  mysqli::query(): MySQL server has gone away in /var/www/html/fly/IM.php on line 130
+PHP Warning:  mysqli::query(): Error reading result set's header in /var/www/html/fly/IM.php on line 130
+PHP Warning:  mysqli::query(): MySQL server has gone away in /var/www/html/fly/IM.php on line 106
+PHP Warning:  mysqli::query(): Error reading result set's header in /var/www/html/fly/IM.php on line 106
+connection close: 9connection close: 10[2020-05-31 09:58:41 #2962.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-31 09:58:41 #2962.1]	INFO	Server is shutdown now
+[2020-05-31 09:58:41 $2970.0]	WARNING	swSignal_callback (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-31 09:58:41 *2972.0]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-31 09:58:41 *2973.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-31 09:58:41 *2974.2]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-31 09:58:41 *2975.3]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-31 09:58:41 *2976.4]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-31 09:58:41 *2977.5]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-31 09:58:41 *2978.6]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-05-31 09:58:41 *2979.7]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /var/www/html/fly/IM.php on line 70
+PHP Fatal error:  Uncaught Error: Call to undefined function mysql_error() in /var/www/html/fly/IM.php:72
+Stack trace:
+#0 /var/www/html/fly/IM.php(11): Server->initDb()
+#1 /var/www/html/fly/IM.php(150): Server->__construct()
+#2 {main}
+  thrown in /var/www/html/fly/IM.php on line 72
+connection close: 1[2020-06-01 22:07:07 *23126.7]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-06-01 22:07:07 *23125.6]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-06-01 22:07:07 *23124.5]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-06-01 22:07:07 *23123.4]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-06-01 22:07:07 *23122.3]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-06-01 22:07:07 *23121.2]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-06-01 22:07:07 *23120.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-06-01 22:07:07 *23119.0]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-06-01 22:07:07 $23117.0]	WARNING	swSignal_callback (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-06-01 22:07:07 #23109.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+PHP Warning:  Error while sending QUERY packet. PID=23119 in /var/www/html/fly/IM.php on line 130
+[2020-06-02 14:54:24 *23119.0]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Broken pipe: 13
+PHP Warning:  Error while sending QUERY packet. PID=23120 in /var/www/html/fly/IM.php on line 130
+[2020-06-02 14:54:25 *23120.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Broken pipe: 13
+PHP Warning:  Error while sending QUERY packet. PID=23121 in /var/www/html/fly/IM.php on line 130
+[2020-06-02 14:54:26 *23121.2]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Broken pipe: 13
+PHP Warning:  Error while sending QUERY packet. PID=23122 in /var/www/html/fly/IM.php on line 130
+[2020-06-02 14:55:29 *23122.3]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Broken pipe: 13
+PHP Warning:  Error while sending QUERY packet. PID=23123 in /var/www/html/fly/IM.php on line 130
+[2020-06-02 14:55:30 *23123.4]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Broken pipe: 13
+PHP Warning:  Error while sending QUERY packet. PID=23124 in /var/www/html/fly/IM.php on line 130
+[2020-06-02 14:55:30 *23124.5]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Broken pipe: 13
+PHP Warning:  Error while sending QUERY packet. PID=23125 in /var/www/html/fly/IM.php on line 130
+[2020-06-02 14:55:31 *23125.6]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Broken pipe: 13
+PHP Warning:  Error while sending QUERY packet. PID=23126 in /var/www/html/fly/IM.php on line 130
+[2020-06-02 14:55:31 *23126.7]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Broken pipe: 13
+connection close: 2connection close: 4connection close: 3connection close: 5connection close: 8connection close: 6connection close: 9connection close: 7connection close: 10connection close: 11connection close: 12connection close: 13connection close: 14connection close: 15connection close: 16connection close: 17connection close: 18connection close: 19connection close: 20connection close: 21connection close: 22connection close: 23connection close: 24connection close: 25connection close: 26connection close: 27connection close: 28connection close: 29connection close: 30connection close: 31connection close: 32connection close: 33connection close: 34connection close: 35connection close: 36connection close: 37connection close: 38connection close: 39connection close: 40connection close: 41connection close: 42connection close: 43connection close: 44connection close: 45connection close: 46connection close: 47connection close: 48connection close: 49connection close: 50connection close: 51connection close: 52connection close: 53connection close: 54connection close: 55connection close: 56connection close: 57connection close: 58connection close: 59connection close: 60connection close: 61connection close: 62connection close: 63connection close: 64connection close: 65connection close: 66connection close: 67connection close: 68connection close: 69connection close: 70connection close: 71connection close: 72connection close: 73connection close: 74connection close: 75connection close: 76connection close: 77connection close: 78connection close: 79connection close: 80connection close: 81connection close: 82connection close: 83connection close: 84connection close: 85connection close: 87connection close: 88connection close: 89connection close: 86connection close: 92connection close: 91connection close: 90connection close: 93connection close: 94connection close: 95connection close: 96connection close: 97connection close: 98connection close: 99connection close: 100connection close: 101connection close: 102connection close: 103connection close: 104connection close: 105connection close: 106connection close: 107connection close: 108connection close: 109connection close: 110connection close: 111connection close: 112connection close: 113connection close: 114connection close: 115connection close: 116connection close: 117connection close: 118connection close: 119connection close: 120connection close: 121connection close: 122connection close: 123connection close: 124connection close: 125connection close: 126connection close: 127connection close: 128connection close: 129connection close: 130connection close: 131connection close: 132connection close: 133connection close: 134connection close: 135connection close: 136connection close: 137connection close: 138connection close: 139string(138) "insert into ent_message (shenqing_id,article_id,from_id,uid,content,item,create_time) values ('0','0',"5",20,'试试','chat','1592482066')"
+PHP Warning:  Swoole\WebSocket\Server::push() expects parameter 1 to be integer, string given in /var/www/html/fly/IM.php on line 45
+connection close: 145connection close: 143connection close: 142connection close: 141connection close: 140connection close: 144connection close: 147connection close: 148connection close: 146connection close: 149connection close: 150connection close: 151connection close: 152connection close: 153connection close: 154connection close: 155connection close: 156connection close: 157connection close: 158connection close: 159connection close: 160connection close: 161connection close: 162connection close: 163connection close: 164connection close: 165connection close: 166connection close: 167connection close: 168connection close: 169connection close: 170connection close: 171connection close: 172connection close: 173connection close: 174connection close: 175connection close: 176connection close: 177connection close: 178connection close: 179connection close: 180connection close: 181connection close: 182connection close: 183connection close: 184connection close: 185connection close: 186connection close: 187connection close: 188connection close: 189connection close: 190connection close: 191connection close: 192connection close: 193connection close: 194connection close: 195connection close: 196connection close: 197connection close: 198connection close: 199connection close: 202connection close: 201connection close: 203connection close: 200connection close: 204connection close: 205connection close: 206connection close: 207connection close: 208connection close: 209connection close: 210connection close: 211connection close: 212connection close: 213connection close: 214connection close: 215connection close: 216connection close: 217connection close: 218connection close: 219connection close: 220connection close: 221connection close: 222connection close: 223connection close: 224connection close: 225connection close: 226connection close: 227connection close: 228connection close: 229connection close: 230connection close: 231connection close: 232connection close: 233string(132) "insert into ent_message (shenqing_id,article_id,from_id,uid,content,item,create_time) values ('0','0',5,16,'12','chat','1602731564')"
+PHP Warning:  Swoole\WebSocket\Server::push() expects parameter 1 to be integer, string given in /var/www/html/fly/IM.php on line 45
+connection close: 235connection close: 234connection close: 236connection close: 237connection close: 238connection close: 239connection close: 240connection close: 241connection close: 242connection close: 243connection close: 244connection close: 245connection close: 246connection close: 247connection close: 248connection close: 249connection close: 250connection close: 251connection close: 252connection close: 253connection close: 254connection close: 255connection close: 256connection close: 257connection close: 258connection close: 259connection close: 260connection close: 261string(131) "insert into ent_message (shenqing_id,article_id,from_id,uid,content,item,create_time) values ('0','0',5,16,'4','chat','1605174783')"
+PHP Warning:  Swoole\WebSocket\Server::push() expects parameter 1 to be integer, string given in /var/www/html/fly/IM.php on line 45
+string(135) "insert into ent_message (shenqing_id,article_id,from_id,uid,content,item,create_time) values ('0','0',5,16,'89498','chat','1605174792')"
+PHP Warning:  Swoole\WebSocket\Server::push() expects parameter 1 to be integer, string given in /var/www/html/fly/IM.php on line 45
+connection close: 264connection close: 262connection close: 265connection close: 263connection close: 266connection close: 267connection close: 268connection close: 269connection close: 270connection close: 271connection close: 272connection close: 273connection close: 274connection close: 275connection close: 276string(134) "insert into ent_message (shenqing_id,article_id,from_id,uid,content,item,create_time) values ('0','0',5,16,'7itt','chat','1605779309')"
+PHP Warning:  Swoole\WebSocket\Server::push() expects parameter 1 to be integer, string given in /var/www/html/fly/IM.php on line 45
+connection close: 277connection close: 278connection close: 282connection close: 280connection close: 279connection close: 281connection close: 284connection close: 286connection close: 285connection close: 283connection close: 287connection close: 288connection close: 289connection close: 290connection close: 291connection close: 292connection close: 293connection close: 294connection close: 295connection close: 296connection close: 297

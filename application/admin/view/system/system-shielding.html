@@ -1,0 +1,44 @@
+﻿{include file="public/_meta" /}
+<title>基本设置</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
+	<span class="c-gray en">&gt;</span>
+	系统管理
+	<span class="c-gray en">&gt;</span>
+	基本设置
+	<a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
+</nav>
+<div class="page-container">
+	<form class="form form-horizontal" id="myform" url="{:url('System/shielding')}">
+		<div>
+			<textarea class="textarea" style="width:98%; height:300px; resize:none" name="content">{$content}</textarea>
+		</div>
+		<div class="mt-20 text-c">
+			<button name="system-base-save" id="system-base-save" class="btn btn-success radius" type="submit"><i class="icon-ok"></i> 确定</button>
+		</div>
+	</form>
+</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="__STATIC__/lib/jquery/1.9.1/jquery.min.js"></script>
+<script src="__STATIC__/lib/layer/2.4/layer.js"></script>
+{load href="__STATIC__/js/jquery.validate.js" /}
+<script type="application/ecmascript">
+	$(function() {
+	//表单验证
+		$("#myform").validate({
+			onkeyup: false,
+			focusCleanup: true,
+			success: "valid",
+			submitHandler: function (form) {
+				singwaapp_save(form);// 需要小伙伴自定义一个singwaapp_save方法 用来处理抛送请求的哦
+			}
+		});
+	});
+</script>
+{include file="public/_footer" /}
+<!--请在下方写此页面业务相关的脚本-->
+
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

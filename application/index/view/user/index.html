@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>用户中心</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="fly,layui,前端社区">
+  <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
+  {include file="public/link" /}
+</head>
+<body>
+
+{include file="public/header" /}
+
+<div class="layui-container fly-marginTop fly-user-main">
+  {include file="public/user-nav" /}
+  
+  
+  <div class="fly-panel fly-panel-user" pad20>
+    {if condition="$user.status neq '1' "}
+      <div class="fly-msg" style="margin-top: 15px;">
+        您的邮箱尚未验证，这比较影响您的帐号安全，<a href="activate.html">立即去激活？</a>
+      </div>
+    {/if}
+    <div class="layui-tab layui-tab-brief" lay-filter="user">
+      <ul class="layui-tab-title" id="LAY_mine">
+        <li data-type="mine-jie" lay-id="index" class="layui-this">我发的帖（<span>{$count}</span>）</li>
+        <li data-type="collection" data-url="/collection/find/" lay-id="collection">我收藏的帖（<span>{$collect_count}</span>）</li>
+      </ul>
+      <div class="layui-tab-content" style="padding: 20px 0;">
+        <div class="layui-tab-item layui-show">
+          <ul class="mine-view jie-row">
+            {volist  name="index" id="vo"}
+              <li>
+                <a class="jie-title" href="{:url('Jie/detail',['id' => $vo.id])}" id="{$vo.id}" target="_blank">{$vo.title}</a>
+                <i>{$vo.create_time|timeFormat}</i>
+                {if condition="$vo.status eq '0' "}
+                <i class="mine-edit layui-bg-red">审核中</i>
+                {elseif condition="$vo.status eq '1' "}
+                <i class="mine-edit">已上架</i>
+                {/if}
+                <a class="mine-edit layui-bg-blue" href="{:url('Jie/add',['id' => $vo.id])}">编辑</a>
+                <a class="mine-edit layui-bg-black" onClick="article_del(this,'{$vo.id}')" href="javascript:;">删除</a>
+                <em>{$vo.read_count}阅/{$vo.comment_count}答</em>
+              </li>
+            {/volist}
+          </ul>
+          <div id="LAY_page"></div>
+        </div>
+        <div class="layui-tab-item">
+          <ul class="mine-view jie-row">
+            {volist  name="collect_jie" id="vo"}
+              <li>
+                <a class="jie-title" href="{:url('Jie/detail',['id' => $vo.id])}" target="_blank">{$vo.title}</a>
+                <i>{$vo.create_time|timeFormat}收藏</i>
+              </li>
+            {/volist}
+          </ul>
+          <div id="LAY_page1"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{include file="public/footer" /}
+<script type="text/javascript">
+  /*帖子-删除*/
+  function article_del(obj,id){
+    layer.confirm('确认要删除吗？',function(index){
+      $.ajax({
+        type: 'POST',
+        url: "{:url('Jie/delete')}",
+        dataType: 'json',
+        data:{
+          id:id
+        },
+        success: function(data){
+          $(obj).parents("li").remove();
+
+          layer.msg(data.msg,{icon:1,time:1000});
+        },
+        error:function(data) {
+          console.log(data.msg);
+          layer.closeAll('dialog');
+        },
+      });
+    });
+  }
+</script>
+</body>
+</html>

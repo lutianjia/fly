@@ -1,0 +1,65 @@
+<div class="fly-panel-title fly-filter">
+  {if condition="$from eq 'zong' || $from eq ''"}
+    <a href="{:url('Index/index',['from' => 'zong','condition' => $condition])}" class="layui-this">综合</a>
+    <span class="fly-mid"></span>
+    <a href="{:url('Index/index',['from' => 'wei','condition' => $condition])}">未结</a>
+    <span class="fly-mid"></span>
+    <a href="{:url('Index/index',['from' => 'yi','condition' => $condition])}">已结</a>
+    <span class="fly-mid"></span>
+    <a href="{:url('Index/index',['from' => 'jing','condition' => $condition])}">精华</a>
+  {/if}
+  {if condition="$from eq 'wei' "}
+    <a href="{:url('Index/index',['from' => 'zong','condition' => $condition])}">综合</a>
+    <span class="fly-mid"></span>
+    <a href="{:url('Index/index',['from' => 'wei','condition' => $condition])}" class="layui-this">未结</a>
+    <span class="fly-mid"></span>
+    <a href="{:url('Index/index',['from' => 'yi','condition' => $condition])}">已结</a>
+    <span class="fly-mid"></span>
+    <a href="{:url('Index/index',['from' => 'jing','condition' => $condition])}">精华</a>
+  {/if}
+  {if condition="$from eq 'yi' "}
+    <a href="{:url('Index/index',['from' => 'zong','condition' => $condition])}">综合</a>
+    <span class="fly-mid"></span>
+    <a href="{:url('Index/index',['from' => 'wei','condition' => $condition])}">未结</a>
+    <span class="fly-mid"></span>
+    <a href="{:url('Index/index',['from' => 'yi','condition' => $condition])}" class="layui-this">已结</a>
+    <span class="fly-mid"></span>
+    <a href="{:url('Index/index',['from' => 'jing','condition' => $condition])}">精华</a>
+  {/if}
+  {if condition="$from eq 'jing' "}
+    <a href="{:url('Index/index',['from' => 'zong','condition' => $condition])}">综合</a>
+    <span class="fly-mid"></span>
+    <a href="{:url('Index/index',['from' => 'wei','condition' => $condition])}">未结</a>
+    <span class="fly-mid"></span>
+    <a href="{:url('Index/index',['from' => 'yi','condition' => $condition])}">已结</a>
+    <span class="fly-mid"></span>
+    <a href="{:url('Index/index',['from' => 'jing','condition' => $condition])}" class="layui-this">精华</a>
+  {/if}
+  <span class="fly-filter-right layui-hide-xs" id="type">
+    {if condition="$condition eq 'new' || $condition eq ''"}
+      <a href="{:url('Index/index',['condition' => 'new','from' => $from])}" onclick="condition(this, 'new')" class="layui-this" >按最新</a>
+      <span class="fly-mid"></span>
+      <a href="{:url('Index/index',['condition' => 're','from' => $from])}" onclick="condition(this, 're')">按热议</a>
+    {/if}
+    {if condition="$condition eq 're' "}
+      <a href="{:url('Index/index',['condition' => 'new','from' => $from])}" onclick="condition(this, 'new')" >按最新</a>
+      <span class="fly-mid"></span>
+      <a href="{:url('Index/index',['condition' => 're','from' => $from])}" onclick="condition(this, 're')" class="layui-this" >按热议</a>
+    {/if}
+  </span>
+</div>
+
+<script type="text/javascript">
+  function condition(obj,type) {
+    if(type == 'new'){
+      content = '<a href="{:url(\'Index/index\',[\'condition\' => \'new\'])}" onclick="condition(\'new\')"  class="layui-this">按最新</a>\n' +
+              '    <span class="fly-mid"></span>\n' +
+              '    <a href="{:url(\'Index/index\',[\'condition\' => \'re\'])}" onclick="condition(\'re\')">按热议</a>';
+    }else if(type == 're'){
+      content = '<a href="{:url(\'Index/index\',[\'condition\' => \'new\'])}" onclick="condition(\'new\')" >按最新</a>\n' +
+              '    <span class="fly-mid"></span>\n' +
+              '    <a href="{:url(\'Index/index\',[\'condition\' => \'re\'])}" onclick="condition(\'re\')" class="layui-this" >按热议</a>';
+    }
+    document.getElementById("type").innerHTML = content;
+  }
+</script>

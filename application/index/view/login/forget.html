@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>找回密码/重置密码</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="fly,layui,前端社区">
+  <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
+  {include file="public/link" /}
+</head>
+<body>
+
+{include file="public/header" /}
+
+<div class="layui-container fly-marginTop">
+  <div class="fly-panel fly-panel-user" pad20>
+    <div class="layui-tab layui-tab-brief" lay-filter="user">
+      <ul class="layui-tab-title">
+        <li><a href="{:url('Login/login')}">登入</a></li>
+        <li class="layui-this">找回密码<!--重置密码--></li>
+      </ul>
+      <div class="layui-form layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
+        <div class="layui-tab-item layui-show">
+          {if condition="$data neq ' '"}
+          <!-- 重置密码 -->
+
+          <div class="fly-msg">{$user.username}，请重置您的密码</div>
+          <div class="layui-form layui-form-pane"  style="margin-top: 30px;">
+            <form method="post" id="myform" url="{:url('Login/reg')}">
+              <div class="layui-form-item">
+                <label for="L_pass" class="layui-form-label">密码</label>
+                <div class="layui-input-inline">
+                  <input type="password" id="L_pass" name="password" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">6到16个字符</div>
+              </div>
+              <div class="layui-form-item">
+                <label for="L_repass" class="layui-form-label">确认密码</label>
+                <div class="layui-input-inline">
+                  <input type="password" id="L_repass" name="password_confirm" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label for="L_vercode" class="layui-form-label">验证码</label>
+                <div class="layui-input-inline">
+                  <input type="text" id="L_vercode" name="vercode" lay-verify="required" placeholder="请输入验证码" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <input type="hidden" name="username" value="{$user.username}">
+                <input type="hidden" name="email" value="{$user.email}">
+                <button class="layui-btn" lay-filter="*" >提交</button>
+              </div>
+            </form>
+          </div>
+
+          {else/}
+          <div class="layui-form layui-form-pane">
+            <form id="myformt">
+              <div class="layui-form-item">
+                <label for="L_email" class="layui-form-label">邮箱</label>
+                <div class="layui-input-inline">
+                  <input type="text" id="L_email" name="email" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label for="L_vercode" class="layui-form-label">人类验证</label>
+                <div class="layui-input-inline">
+                  <input type="text" id="L_vercode" name="vercode" lay-verify="required" placeholder="请回答后面的问题" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid">
+                  <span style="color: #c00;">{$d_vercode}</span>
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <button class="layui-btn" type="button" onclick="ajaxPost()">提交</button>
+              </div>
+            </form>
+          </div>
+          {/if}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+
+{include file="public/footer" /}
+<script type="text/javascript">
+  function ajaxPost(){
+    var formData = $("#myformt").serialize();
+    //serialize() 方法通过序列化表单值，创建 URL 编码文本字符串,这个是jquery提供的方法
+    $.ajax({
+      type:"POST",
+      url:"{:url('Login/forget')}",
+      data:formData,//这里data传递过去的是序列化以后的字符串
+      success:function(result){
+        if(result.code == 0){
+          layer.msg(result.msg, {icon:5, time:2000});
+        }else if(result.code == 1){
+          layer.msg(result.msg, {icon:7, time:2000});
+          console.log(result.data);
+            // sleep(2000);
+          window.location.href = "http://fly.com:8080/index/Login/forget?email=" + result.data;
+
+        }
+      }
+    });
+    $.ajax({
+      type:"POST",
+      url:"{:url('Login/sendemail')}",
+      data:formData,//这里data传递过去的是序列化以后的字符串
+      success:function(result){
+
+      }
+    });
+  }
+
+  $(function() {
+    //表单验证
+    $("#myform").validate({
+      onkeyup: false,
+      focusCleanup: true,
+      success: "valid",
+      submitHandler: function (form) {
+        console.log(form);
+        singwaapp_save(form);// 需要小伙伴自定义一个singwaapp_save方法 用来处理抛送请求的哦
+      }
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<div class="fly-panel fly-column">
+  <div class="layui-container">
+    <ul class="layui-clear">
+      {if condition="$type eq '' "}
+      <li class="layui-hide-xs layui-this"><a href="{:url('Jie/index')}">首页</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'ti'])}">提问</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'fen'])}">分享</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'tao'])}">讨论</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'jian'])}">建议</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'gong'])}">公告</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'dong'])}">动态</a></li>
+      {elseif condition="$type eq 'ti' "}
+      <li><a href="{:url('Jie/index')}">首页</a></li>
+      <li class="layui-hide-xs layui-this"><a href="{:url('Jie/index',['type' => 'ti'])}">提问</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'fen'])}">分享</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'tao'])}">讨论</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'jian'])}">建议</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'gong'])}">公告</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'dong'])}">动态</a></li>
+      {elseif condition="$type eq 'fen' "}
+      <li><a href="{:url('Jie/index')}">首页</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'ti'])}">提问</a></li>
+      <li class="layui-hide-xs layui-this"><a href="{:url('Jie/index',['type' => 'fen'])}">分享</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'tao'])}">讨论</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'jian'])}">建议</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'gong'])}">公告</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'dong'])}">动态</a></li>
+      {elseif condition="$type eq 'tao' "}
+      <li><a href="{:url('Jie/index')}">首页</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'ti'])}">提问</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'fen'])}">分享</a></li>
+      <li class="layui-hide-xs layui-this"><a href="{:url('Jie/index',['type' => 'tao'])}">讨论</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'jian'])}">建议</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'gong'])}">公告</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'dong'])}">动态</a></li>
+      {elseif condition="$type eq 'jian' "}
+      <li><a href="{:url('Jie/index')}">首页</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'ti'])}">提问</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'fen'])}">分享</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'tao'])}">讨论</a></li>
+      <li class="layui-hide-xs layui-this"><a href="{:url('Jie/index',['type' => 'jian'])}">建议</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'gong'])}">公告</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'dong'])}">动态</a></li>
+      {elseif condition="$type eq 'gong' "}
+      <li><a href="{:url('Jie/index')}">首页</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'ti'])}">提问</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'fen'])}">分享</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'tao'])}">讨论</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'jian'])}">建议</a></li>
+      <li class="layui-hide-xs layui-this"><a href="{:url('Jie/index',['type' => 'gong'])}">公告</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'dong'])}">动态</a></li>
+      {elseif condition="$type eq 'dong' "}
+      <li><a href="{:url('Jie/index')}">首页</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'ti'])}">提问</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'fen'])}">分享</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'tao'])}">讨论</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'jian'])}">建议</a></li>
+      <li><a href="{:url('Jie/index',['type' => 'gong'])}">公告</a></li>
+      <li class="layui-hide-xs layui-this"><a href="{:url('Jie/index',['type' => 'dong'])}">动态</a></li>
+      {/if}
+      <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><span class="fly-mid"></span></li> 
+
+      <!-- 用户登入后显示 -->
+      <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="{:url('user/index')}">我发表的贴</a></li>
+      <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="{:url('user/index#collection')}">我收藏的贴</a></li>
+    </ul> 
+    
+    <div class="fly-column-right layui-hide-xs">
+      <span class="fly-search"><i class="layui-icon"></i></span>
+      <a href="{:url('Jie/add')}" class="layui-btn">发表新帖</a>
+    </div>
+    <div class="layui-hide-sm layui-show-xs-block" style="margin-top: -10px; padding-bottom: 10px; text-align: center;">
+      <a href="{:url('Jie/add')}" class="layui-btn">发表新帖</a>
+    </div>
+  </div>
+</div>
